@@ -30,6 +30,7 @@ export class MemberService {
   }
 
   deleteMember(selectedMember) {
-    var firebaseMember = this.getMemberById(localMember.$key);
+    var firebaseMember = this.getMemberById(selectedMember.$key);
+    firebaseMember.remove();
   }
 }
