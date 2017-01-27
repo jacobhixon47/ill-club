@@ -10,7 +10,6 @@ import { MemberService } from '../member.service';
   providers: [MemberService]
 })
 export class AdminComponent implements OnInit {
-
   constructor(private memberService: MemberService) { }
 
   ngOnInit() {

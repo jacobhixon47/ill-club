@@ -4,6 +4,7 @@
     <h3>Age: {{(member | async)?.age}}</h3>
     <h3>Rank: {{(member | async)?.rank}}</h3>
     <h3>Bio: {{(member | async)?.bio}}</h3>
+    <button routerLink="/members" class="btn my-button">Back</button>
+    <!-- <button type="button" (click)="goToEditPage(member)" class="btn my-button">Edit</button> -->
   </div>
 </div>
-<h2 routerLink="/members" style="cursor: pointer;">Back</h2>

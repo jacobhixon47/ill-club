@@ -20,4 +20,16 @@ export class MemberService {
   addMember(newMember: Member) {
     this.members.push(newMember);
   }
+
+  updateMember(localMember) {
+    var firebaseMember = this.getMemberById(localMember.$key);
+    firebaseMember.update({name: localMember.name,
+                                bio: localMember.bio,
+                                age: localMember.age,
+                                rank: localMember.rank});
+  }
+
+  deleteMember(selectedMember) {
+    var firebaseMember = this.getMemberById(localMember.$key);
+  }
 }

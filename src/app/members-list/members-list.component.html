@@ -1,6 +1,13 @@
-<div *ngFor="let member of members | async" (click)="goToDetailsPage(member)" class="row" style="cursor: pointer;">
+<div *ngFor="let member of members | async" class="row" style="cursor: pointer;">
   <div class="col-md-12 column">
-    <h2>{{member.name}}</h2>
-    <h3>Rank: {{member.rank}}</h3>
+    <div (click)="goToDetailsPage(member)">
+      <h2>{{member.name}}</h2>
+      <h3>Rank: {{member.rank}}</h3>
+    </div>
+    <div *ngIf="currentRoute==='/admin'">
+      <h3>Bio: {{member.bio}}</h3>
+      <h3>Age: {{member.age}}</h3>
+      <edit-member [selectedMember]="member"></edit-member>
+    </div>
   </div>
 </div>

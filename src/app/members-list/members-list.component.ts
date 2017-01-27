@@ -5,7 +5,7 @@ import { Member } from '../member.model';
 import { MemberService } from '../member.service';
 
 @Component({
-  selector: 'app-members-list',
+  selector: 'members-list',
   templateUrl: './members-list.component.html',
   styleUrls: ['./members-list.component.scss'],
   providers: [MemberService]
@@ -13,6 +13,7 @@ import { MemberService } from '../member.service';
 
 export class MembersListComponent implements OnInit {
   members: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
   constructor(private router: Router, private memberService: MemberService) { }
 
   ngOnInit() {

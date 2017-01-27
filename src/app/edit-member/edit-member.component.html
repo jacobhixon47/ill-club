@@ -1,0 +1,28 @@
+<h4>Edit Member</h4>
+
+<div class="form">
+  <h3>Edit Member</h3>
+  <div>
+    <label>Name:</label>
+    <br>
+    <input [(ngModel)]="selectedMember.name">
+  </div>
+  <div>
+    <label>Bio:</label>
+    <br>
+    <textarea [(ngModel)]="selectedMember.bio"></textarea>
+  </div>
+
+  <div>
+    <label>Age:</label>
+    <br>
+    <input type="number" [(ngModel)]="selectedMember.age">
+  </div>
+  <div>
+    <label>Rank:</label>
+    <br>
+    <input type="number" [(ngModel)]="selectedMember.rank">
+  </div><br>
+  <button (click)="updateMember(selectedMember)" class="btn my-button">Update</button><br><br>
+  <button(click)="deleteMember(selectedMember)" class="btn my-button">Delete</button>
+</div>

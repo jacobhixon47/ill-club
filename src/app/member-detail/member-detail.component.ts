@@ -4,6 +4,7 @@ import { FirebaseListObservable } from 'angularfire2';
 import { Location } from '@angular/common';
 import { Member } from '../member.model';
 import { MemberService } from '../member.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-member-detail',
@@ -15,7 +16,7 @@ export class MemberDetailComponent implements OnInit {
   memberId: string;
   member;
 
-  constructor(private route: ActivatedRoute, private location: Location, private memberService: MemberService) { }
+  constructor(private router: Router, private route: ActivatedRoute, private location: Location, private memberService: MemberService) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
@@ -23,4 +24,8 @@ export class MemberDetailComponent implements OnInit {
     });
     this.member = this.memberService.getMemberById(this.memberId);
   }
+
+  // goToEditPage(member) {
+  //   this.router.navigate(['/edit', this.memberId])
+  // }
 }
