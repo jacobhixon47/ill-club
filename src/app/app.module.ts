@@ -8,6 +8,7 @@ import { MembersListComponent } from './members-list/members-list.component';
 import { AboutComponent } from './about/about.component';
 import { MemberDetailComponent } from './member-detail/member-detail.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
