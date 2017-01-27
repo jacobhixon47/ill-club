@@ -10,6 +10,7 @@ import { MemberService } from '../member.service';
   styleUrls: ['./members-list.component.scss'],
   providers: [MemberService]
 })
+
 export class MembersListComponent implements OnInit {
   members: FirebaseListObservable<any[]>;
   constructor(private router: Router, private memberService: MemberService) { }
@@ -17,5 +18,10 @@ export class MembersListComponent implements OnInit {
   ngOnInit() {
     this.members = this.memberService.getMembers();
   }
+
+  goToDetailsPage(member) {
+    this.router.navigate(['members', member.$key])
+  }
+
 
 }
