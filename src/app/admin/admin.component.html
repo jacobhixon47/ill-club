@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="form">
+      <h3>Add New Member</h3>
+      <div>
+        <label>Name:</label>
+        <br>
+        <input #newName>
+      </div>
+      <div>
+        <label>Bio:</label>
+        <br>
+        <textarea #newBio></textarea>
+      </div>
+
+      <div>
+        <label>Age:</label>
+        <br>
+        <input type="number" #newAge>
+      </div>
+      <div>
+        <label>Rank:</label>
+        <br>
+        <input type="number" #newRank>
+      </div><br>
+      <button (click)="submitForm(newName.value, newBio.value, newAge.value, newRank.value); newName.value=''; newBio.value=''; newAge.value=''; newRank.value='';" class="btn my-button">Add Member</button><br><br>
+    </div>
+  </div>
+</div>

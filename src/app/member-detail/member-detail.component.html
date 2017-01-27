@@ -1,6 +1,9 @@
-<h1>{{(member | async)?.name}}</h1>
-<h3>Age: {{(member | async)?.age}}</h3>
-<h3>Rank: {{(member | async)?.rank}}</h3>
-<h3>Bio: {{(member | async)?.bio}}</h3>
-<br><br>
+<div class="row">
+  <div class="col-md-12">
+    <h1>{{(member | async)?.name}}</h1>
+    <h3>Age: {{(member | async)?.age}}</h3>
+    <h3>Rank: {{(member | async)?.rank}}</h3>
+    <h3>Bio: {{(member | async)?.bio}}</h3>
+  </div>
+</div>
 <h2 routerLink="/members" style="cursor: pointer;">Back</h2>
