@@ -26,12 +26,12 @@ You will need the following things properly installed on your computer.
     * in the authentication page of your console, click on `web setup`
     * create a file in your project directory `/src/app/api-keys.ts`
     * in your `api-keys.ts` file, copy the info from the `web setup` page on firebase in this format:
-        `export class masterFirebaseConfig = {
-            apiKey: <your-api-key>,
-            authDomain: <your-auth-domain>,
-            databaseURL: <your-database-URL>,
-            storageBucket: <your-storage-Bucket>
-          }`
+    >  `export class masterFirebaseConfig = {
+    >      apiKey: <your-api-key>,
+    >      authDomain: <your-auth-domain>,
+    >      databaseURL: <your-database-URL>,
+    >      storageBucket: <your-storage-Bucket>
+    >    }`
 * this should complete the setup
 
 ## Running / Development
