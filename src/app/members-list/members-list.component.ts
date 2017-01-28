@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { Member } from '../member.model';
 import { MemberService } from '../member.service';
+import { RankPipe } from '../rank.pipe';
 
 @Component({
   selector: 'members-list',
@@ -12,6 +13,7 @@ import { MemberService } from '../member.service';
 })
 
 export class MembersListComponent implements OnInit {
+  filterByRank: string = "allMembers";
   members: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
   constructor(private router: Router, private memberService: MemberService) { }
@@ -24,5 +26,7 @@ export class MembersListComponent implements OnInit {
     this.router.navigate(['members', member.$key])
   }
 
-
+  onChange(menuOption) {
+    this.filterByRank = menuOption;
+  }
 }

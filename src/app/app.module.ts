@@ -13,6 +13,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { routing } from './app.routing';
 import { AdminComponent } from './admin/admin.component';
 import { EditMemberComponent } from './edit-member/edit-member.component';
+import { RankPipe } from './rank.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     MemberDetailComponent,
     WelcomeComponent,
     AdminComponent,
-    EditMemberComponent
+    EditMemberComponent,
+    RankPipe
   ],
   imports: [
     BrowserModule,

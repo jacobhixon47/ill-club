@@ -1,4 +1,10 @@
-<div *ngFor="let member of members | async" class="row" style="cursor: pointer;">
+<select (change)="onChange($event.target.value)">
+  <option value="allRanks" selected="selected">All Members</option>
+  <option value="highRank">High-Ranking Members</option>
+  <option value="lowRank">Low-Ranking Members</option>
+</select>
+
+<div *ngFor="let member of members | async | ranking:filterByRank" class="row" style="cursor: pointer;">
   <div class="col-md-12 column">
     <div (click)="goToDetailsPage(member)">
       <h2>{{member.name}}</h2>
