@@ -16,12 +16,12 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd <repository-url>`
+* `git clone <repository-url>`
+* `cd <repository-name>`
 * `npm install`
 * `bower install`
 * You will also need to:
-    * create a database on [firebase](www.firebase.google.com)
+    * create a database on [firebase](https://firebase.google.com)
       * go into database/rules section of your firebase console and change read and write to `true`.
     * in the authentication page of your console, click on `web setup`
     * in your `api-keys.ts` file, copy the info from the `web setup` page on firebase in this format:
