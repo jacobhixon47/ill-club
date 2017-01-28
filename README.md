@@ -1,31 +1,57 @@
-# IlluminatiClub
+# illclub
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
+#### By: _Jacob Hixon_
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This README outlines the details of collaborating on this Angular 2 application.
 
-## Code scaffolding
+'illclub' is a mock club management website, the framework of which could be tailored to meet the member-management needs of any team, club, or other organization.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Prerequisites
 
-## Build
+You will need the following things properly installed on your computer.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/) (with NPM)
+* [Bower](https://bower.io/)
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* `git clone <repository-url>` this repository
+* `cd <repository-url>`
+* `npm install`
+* `bower install`
+* You will also need to:
+    * create a database on [firebase](www.firebase.google.com)
+      * go into database/rules section of your firebase console and change read and write to `true`.
+    * in the authentication page of your console, click on `web setup`
+    * in your `api-keys.ts` file, copy the info from the `web setup` page on firebase in this format:
+      `export class masterFirebaseConfig = {
+        apiKey: <your-api-key>,
+        authDomain: <your-auth-domain>,
+        databaseURL: <your-database-URL>,
+        storageBucket: <your-storage-Bucket>
+        }`
+* this should complete the setup
 
-## Running end-to-end tests
+## Running / Development
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+* `ng serve`
+* Visit your app at [http://localhost:4200](http://localhost:4200).
 
-## Deploying to GitHub Pages
 
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
+This file is part of (illclub).
 
-## Further help
+  (illclub) is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
 
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  (illclub) is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with the (illclub). If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (c) 2017 **_Jacob Hixon_**
