@@ -24,6 +24,7 @@ You will need the following things properly installed on your computer.
     * create a database on [firebase](https://firebase.google.com)
       * go into database/rules section of your firebase console and change read and write to `true`.
     * in the authentication page of your console, click on `web setup`
+    * create a file in your project directory `/src/app/api-keys.ts`
     * in your `api-keys.ts` file, copy the info from the `web setup` page on firebase in this format:
       `export class masterFirebaseConfig = {
         apiKey: <your-api-key>,
